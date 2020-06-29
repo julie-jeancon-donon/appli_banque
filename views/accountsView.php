@@ -123,7 +123,7 @@ include('includes/header.php');
 												<label>Entrer une somme à transférer</label>
 												<input type="number" name="balance" placeholder="Ex: 300"  required>
 												<input type="hidden" name="idDebit" value="<?php echo $account->getId();?>" required>
-												<label for="">Sélectionner un compte pour le virement</label>
+												<label class="mt-2" for="">Sélectionner un compte pour le virement</label>
 												<select name="idPayment" required>
 													<option value="">Choisir un compte</option>
 													<?php 

@@ -18,10 +18,10 @@ include('includes/header.php');
 	<div class="row connexion text-center mt-5">
 		
 			<form class="col-12 col-md-5 col-lg-3 mx-auto" action="../controllers/index.php" method="post">
-			
-						<input class="col-12 mt-2 mx-auto" placeholder="E-mail" name="mail" type="email" value="<?php if(isset($_SESSION['mail'])){ echo $_SESSION['mail'] ;}?>" autofocus required>
-
-							<input class="col-12 mt-2 mx-auto" placeholder="Password" name="password" type="password" required>
+							<label class="col-12 text-left mx-auto p-0">E-mail:</label>
+							<input class="col-12 mx-auto" placeholder="E-mail" name="mail" type="email" value="<?php if(isset($_SESSION['mail'])){ echo $_SESSION['mail'] ;}?>" autofocus required>
+							<label class="col-12 text-left mt-3 mx-auto p-0">Mot de passe:</label>
+							<input class="col-12 mx-auto" placeholder="Mot de passe" name="password" type="password" required>
 									<!-- <input type="hidden" name="token" value="<?php echo $token; ?>"> -->
 							<input type="hidden" name="verif" value="">
 						

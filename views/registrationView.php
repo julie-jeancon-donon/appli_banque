@@ -21,11 +21,15 @@ if(isset($error_message)){
 <div class="row connexion text-center mt-5">
 
 	<form class="col-12 col-md-5 col-lg-3 mx-auto" action="../controllers/registration.php" method="post">
-		<input class="col-12 mt-2 mx-auto" type="text" name="mail" placeholder="Mon E-mail" required autofocus>
-		<input class="col-12 mt-2 mx-auto" type="text" name="name" placeholder="Mon Prénom" required>
-		<input class="col-12 mt-2 mx-auto" type="password" name="password" placeholder="Mon mot de passe" required>
-		<input class="col-12 mt-2 mx-auto" type="password" name="confirmation" placeholder="Confirmation du mot de passe" required>
-		<input class="col-12 mt-2 mx-auto" type="hidden" name="verif" value="">
+		<label class="col-12 text-left mt-3 mx-auto p-0">E-mail:</label>
+		<input class="col-12 mx-auto" type="text" name="mail" placeholder="Votre E-mail" required autofocus>
+		<label class="col-12 text-left mt-3 mx-auto p-0">Nom d'utilisateur:</label>
+		<input class="col-12 mx-auto" type="text" name="name" placeholder="Votre nom" required>
+		<label class="col-12 text-left mt-3 mx-auto p-0">Mot de passe:</label>
+		<input class="col-12 mx-auto" type="password" name="password" placeholder="Votre mot de passe" required>
+		<label class="col-12 text-left mt-3 mx-auto p-0">Confirmation du mot de passe:</label>
+		<input class="col-12 mx-auto" type="password" name="confirmation" placeholder="Confirmez votre mot de passe" required>
+		<input class="col-12 mt-2 mt-2 mx-auto" type="hidden" name="verif" value="">
 		<div class="pt-3">
 			<input class="col-12 mt-2 mx-auto btnco" type="submit" name="connection" value="Créer mon compte">
 		</div>
