@@ -1,0 +1,275 @@
+html, body{
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', sans-serif;
+}
+
+/********** MAIN PAGE **********/
+
+header, header input{
+	background:#0575A5;
+	color: white;
+}
+
+header p{
+	margin: 10px 10px 10px 10px!important;
+	font-size: 16px;
+	font-weight: 500;
+}
+
+header a{
+	color:white;
+}
+
+.signout{
+	border: none !important;
+	font-size: 12px;
+	text-align: right !important;
+	color: rgb(56, 56, 56);
+}
+
+.title {
+	font-size:20px;
+	margin-top: 20px;
+	color:#0575A5;
+}
+
+h1{
+	font-size: 22px !important;
+}
+
+h3{
+	margin-top: 10px;;
+	background:#0575A5;
+	color: white;
+	font-size: 15px !important;
+	text-align: center;
+	padding: 10px;
+}
+
+h4{
+	font-size: 15px!important;
+}
+
+.red{
+	color:red;
+}
+
+.green{
+	color:green;
+}
+
+hr{
+	border: 1px solid rgba(180, 180, 180, 0.5)!important; 
+	width: 90%;
+	display: block;
+	margin: auto;
+}
+
+.error-message{
+	background: rgb(228, 67, 67);
+	color: white;
+	font-size: 15px;
+	font-weight: 500;
+}
+
+.newAccount{
+	padding: 0 15px;
+		
+}
+
+.container{
+	max-width: 100%!important;
+}
+
+.card{
+	border: 0em !important;
+	border-radius: 0!important;
+	margin: 15px;
+	background-color: rgb(231, 230, 235)!important;
+}
+
+.card-container{
+	margin: auto;
+}
+
+.card-content{
+	padding: 20px;
+	font-size: 10px;
+}
+
+.card form{
+	margin: 10px 0;
+}
+
+.card input, .card select, .newAccount select, .newAccount input{
+	width: 100%;
+	height: 30px;
+	margin: 5px 0;
+}
+
+.amount{
+	font-size: 17px;
+}
+
+.delete{
+	margin-top: 30px!important;
+}
+
+.delete input{
+	width: 52%;
+	display: block;
+	margin: auto!important;
+	background: #0575A5;
+	color: white;
+	border: 0;
+}
+
+.alert{
+	color: red;
+}
+
+
+.main-content{
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin-top: 20px;
+}
+
+.open-account{
+	font-size: 11px;
+	background-color: #bad3f2;
+	border: 0;
+}
+
+.cross a{
+	font-size: 15px;
+	font-weight: 500;
+	color:white;
+	text-decoration: none;
+}
+
+/* Modal Content/Box */
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+/********** LOGIN/REGISTRATION PAGE **********/
+
+.btnco {
+  background: #0575A5;
+  color: white;
+  border: #0575A5 1px solid!important;
+}
+
+.sign{
+	font-size: 12px;
+}
+
+.connexion input{
+	height: 30px;
+}
+/************************* TABLET *************************/
+
+
+@media (min-width: 768px) {
+
+	.connexion input {
+	  height: 30px;
+	}
+
+	h1{
+		font-size: 30px;
+	}
+
+	header p {
+	  font-size: 20px;
+	  
+	}
+
+	.sign {
+	  font-size: 15px;
+	}
+
+	.card-content {
+	  margin: 10px;
+	  padding: 20px;
+	}
+}
+
+
+/************************* LAPTOP *************************/
+@media (min-width: 1024px){
+	
+	.connexion input {
+	  height: 45px;
+	}
+
+	header p{
+	  font-size: 25px;
+	}
+
+	.title{
+		font-size: 25px!important;
+	}
+	.sign {
+	  font-size: 15px;
+	}
+
+	.signout{
+		font-size: 15px;;
+	}
+	.card-content{
+		margin: 10px;
+		padding: 25px;
+	}
+
+	.cont{
+		padding: 30px!important;
+	}
+	
+}
+
