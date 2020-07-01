@@ -1,8 +1,7 @@
 <?php
 
-/**
- *  Classe permettant de gérer les opérations en base de données concernant les objets User
- */
+// create model class for type user 
+
 class UserManager
 {
 

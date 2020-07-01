@@ -42,9 +42,6 @@ class Account
         }
 
 
-
-
-
     /**
      * Set the value of id
      * @param int $id
@@ -72,21 +69,34 @@ class Account
     }
     
     /**
-     * get user id
-     * @param int
-     * 
-     */
-    public function getUserId(){
-    return $this->user_id;
-    }
-
-    /**
      * set type of account
      * @param string $type_account
      * @return self
      */
     public function setTypeAccount(string $typeAccount){
         $this->typeAccount = $typeAccount; 
+    }
+
+    /**
+     * Set the value of balance
+     * @param int $balance
+     * @return  self
+     */ 
+    public function setBalance($balance)
+    {
+        $balance = (int) $balance;
+        $this->balance = $balance;
+    
+        return $this;
+    }
+
+    /**
+     * get user id
+     * @param int
+     * 
+     */
+    public function getUserId(){
+    return $this->user_id;
     }
 
     /**
@@ -99,8 +109,6 @@ class Account
         return $this->typeAccount;
     }
 
-
-
     /**
      * Get the value of id
      *
@@ -111,52 +119,41 @@ class Account
         return $this->id;
     }
 
-        /**
-         * Set the value of balance
-         * @param int $balance
-         * @return  self
-         */ 
-        public function setBalance($balance)
-        {
-                $balance = (int) $balance;
-                $this->balance = $balance;
 
-                return $this;
-        }
-
-        /**
-         * get the value of the balance
-         *
-         * @return int
-         */
-        public function getBalance()
-        {
-                return $this->balance;
-            }
+    /**
+     * get the value of the balance
+     *
+     * @return int
+     */
+    public function getBalance()
+    {
+        return $this->balance;
+    }
         
-        /**
-         * get balance when its debited
-         *
-         * @param int $debit
-         * @return int
-         */
-        public function calculDebit($debit)
-        {
-            $newBalance = $this->getBalance() - $debit;
-            $this->setBalance($newBalance);
+        
+    /**
+     * get balance when its debited
+     *
+     * @param int $debit
+     * @return int
+     */
+    public function calculDebit($debit)
+    {
+        $newBalance = $this->getBalance() - $debit;
+        $this->setBalance($newBalance);
 
-        }
+    }
 
-        /**
-         * get balance when its credited
-         *
-         * @param int $credit
-         * @return int
-         */
-        public function calculCredit($credit)
-        {
-            $newBalance = $this->getBalance() + $credit;
-            $this->setBalance($newBalance);
-        }
+    /**
+     * get balance when its credited
+     *
+     * @param int $credit
+     * @return int
+     */
+    public function calculCredit($credit)
+    {
+        $newBalance = $this->getBalance() + $credit;
+        $this->setBalance($newBalance);
+    }
 
 }

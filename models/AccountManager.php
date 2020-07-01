@@ -3,7 +3,7 @@
 
 declare(strict_types = 1);
 
-// create model class 
+// create model class for account
 class AccountManager
 {
     private $_db;
@@ -102,13 +102,13 @@ class AccountManager
         $query->bindValue('typeAccount', $type_account, PDO::PARAM_INT);
         $query->bindValue('user_id', $_SESSION['id'], PDO::PARAM_INT);
         $query->execute();
-        // echo $type_account;
-        // Si il y a une entrée avec ce nom, c'est qu'il existe
+    
+        // if the result is >o this account exists 
         if ($query->rowCount() > 0)
         {
             return true;
         }
-        // Sinon c'est qu'il n'existe pas
+
         return false;
     }
 

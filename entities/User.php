@@ -3,13 +3,10 @@
 
 class User
 {
-
-
     protected   $id,
                 $name,
 				$mail,
                 $password;
-
 
 	public function __construct(array $array){
 		$this->hydrate($array);
@@ -61,7 +58,6 @@ class User
 		}
     }
     
-
 	public function getId(){
 		return $this->id;
 	}
@@ -77,8 +73,6 @@ class User
 	public function getPassword(){
 		return $this->password;
     }
-
-    
 
 
 }

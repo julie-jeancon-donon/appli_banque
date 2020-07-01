@@ -22,13 +22,14 @@ $type_manager = new TypeAccountManager($db);
 $errorAccount = false;
 
 
-// if we click on "ouvrir un nouveau compte", we create a new object Account and add in DB
+// if we click on "ouvrir un nouveau compte", we create a new object Account
 if(isset($_POST['new']))
 {
-    // Si le champ name est bien rempli, et n'est pas vide
+    // if form is correctly filled
 	if(isset($_POST['name']) && !empty($_POST['name'])){
-
+        // we create a variable which returns true if this account already exists
         $verifAccount = $manager->checkIfExists($_POST['name']);
+        // if the verif variable returns false it means this account doesn't exist so we can instantiate a new account object in db
         if(!$verifAccount) {
             $idAccount = htmlspecialchars($_POST['name']);
             $balance = 80;
@@ -49,7 +50,7 @@ if(isset($_POST['new']))
 
 }
     
-// if we click on "supprimer", we delete account from DB
+// if we click on "supprimer", we delete account from db
 if(isset($_POST['delete']))
 {
     $id = $_POST['id'];
@@ -58,7 +59,7 @@ if(isset($_POST['delete']))
 }
 
 
-// if we click on "crediter", we credit balance of the account and we update balance in DB
+// if we click on "crediter", we credit balance of the account and we update balance in db
 if (isset($_POST['payment']))
 {
     $id = $_POST['id'];
@@ -69,7 +70,7 @@ if (isset($_POST['payment']))
     $manager->update($account);
 }
 
-// if we click on "debiter", we debit balance of the account and update balance in DB
+// if we click on "debiter", we debit balance of the account and update balance in db
 if (isset($_POST['debit']))
 {
     $id = $_POST['id'];
@@ -79,15 +80,9 @@ if (isset($_POST['debit']))
     $account->calculDebit($balance);
     $manager->update($account);
 
-    // // condition to PEL can't be debited
-    // if($account->getName($id) != "PEL")
-    // {
-    //     $account->calculDebit($balance);
-    //     $manager->update($account);
-    // } 
 }
 
-// if we click on "transferer l'argent", we debit the account, credit the receiver and update in DB
+// if we click on "transferer l'argent", we debit the account, credit the receiver and update in db
 if (isset($_POST['transfer']))
 {
 $idDebit = $_POST['idDebit'];
@@ -100,16 +95,6 @@ $balance = $_POST['balance'];
     $accountTransfer->calculCredit($balance);
     $manager->update($account);
     $manager->update($accountTransfer);
-
-    // // condition to PEL can't be debited
-    // if($account->getTypeAccount($idDebit) != )
-    // {
-    //     $account->calculDebit($balance);
-    //     $accountTransfer->calculCredit($balance);
-    //     $manager->update($account);
-    //     $manager->update($accountTransfer);
-
-    // }
 
 }
 

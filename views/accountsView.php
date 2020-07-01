@@ -10,7 +10,6 @@ include('includes/header.php');
 	</header>
 	
 		<form class="signout mt-3" action="../controllers/account.php" method="post">
-			<!-- <input type="hidden" name="token" value="<?php echo $token; ?>"> -->
 			<input type="hidden" name="verif" value="">
 			<input class="signout" type="submit" name="logout" value="Déconnexion">
 		</form>
@@ -29,12 +28,7 @@ include('includes/header.php');
 							<option value="">Sélectionner un type de compte</option>
 							<?php foreach ($account_type as $value) { ?>
 
-							<option value="<?php echo $value->getId_type();?>"><?php echo $value->getName();?></option>
-							<?php } ?>
-							<!-- <option value="PEL">PEL</option>
-							<option value="Compte courant">Compte courant</option>
-							<option value="Compte joint">Compte joint</option>
-							<option value="Livret A">Livret A</option>	 -->
+							<option value="<?php echo $value->getId_type();?>"><?php echo $value->getName();?></option> <?php } ?>
 						</select>
 						<input type="submit" name="new" class="open-account p-1" value="Valider">
 					</form>
